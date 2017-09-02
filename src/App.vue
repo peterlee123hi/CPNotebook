@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,800');
 
 #app {
   font-family: 'Avenir', 'Source Sans Pro', Helvetica, Arial, sans-serif;

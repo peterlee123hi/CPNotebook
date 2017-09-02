@@ -1,31 +1,20 @@
 <template>
-  <div class="selector">
-    <div class="selector-buttons">
-      <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
-    </div>
-    <code></code>
+  <div class="code">
+    <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
+    <p>hi</p>
   </div>
 </template>
 
 <script>
-import Code from './Code.vue'
 export default {
-  name: 'selector',
-  components: { Code },
+  name: 'code',
   data () {
     return {
       selected: 'None',
       isSelected: function (button) {
         return this.selected === button
       },
-      buttons: [
-        'Templates',
-        'Data Structures',
-        'Dynamic Programming',
-        'Graph Algorithms',
-        'Math',
-        'String Processing'
-      ],
+      buttons: ['hi'],
       algorithms: {
         'Templates': ['C++', 'Java'],
         'Data Structures': ['Union Find', 'Segment Tree', 'Fenwick Tree'],
@@ -46,7 +35,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.selector-buttons {
+.code {
   background-color: #eee;
   padding-top: 20px;
   padding-bottom: 20px;

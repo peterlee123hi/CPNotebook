@@ -4,6 +4,7 @@
       <div class="overlay"></div>
       <div class="banner_heading">
         <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
       </div>
     </div>
     <selector></selector>
@@ -17,7 +18,8 @@ export default {
   components: { Selector },
   data () {
     return {
-      title: 'Competitive Programming Notebook'
+      title: 'Competitive Programming Notebook',
+      subtitle: 'Algorithms for the ACM-ICPC'
     }
   }
 }
@@ -33,6 +35,10 @@ h1, h2, p {
 h1 {
   font-weight: 900;
   letter-spacing: 1.2px;
+}
+
+h2 {
+  font-weight: 100;
 }
 
 .code_background {
