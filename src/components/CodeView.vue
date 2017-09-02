@@ -1,13 +1,13 @@
 <template>
-  <div class="code">
-    <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
+  <div class="codeView">
+<!--     <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" /> -->
     <p>hi</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'code',
+  name: 'codeView',
   data () {
     return {
       selected: 'None',
@@ -35,7 +35,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.code {
+.codeView {
   background-color: #eee;
   padding-top: 20px;
   padding-bottom: 20px;
