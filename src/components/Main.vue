@@ -25,7 +25,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-h1, h2 {
+h1, h2, p {
+  font: 'Source Sans Pro';
   font-weight: normal;
 }
 
@@ -46,7 +47,7 @@ h1, h2 {
   }
 }
 
-.overlay{
+.overlay {
   background-color: black;
   opacity: 0.7;
   position: absolute;
