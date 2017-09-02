@@ -1,6 +1,6 @@
 <template>
   <div class="selector">
-    <input v-for="button in buttons" type="button" v-bind:class="{ selected: isSelected }" class="primary category"  v-bind:value="button" v-on:click="select" />
+    <input v-for="button in buttons" type="button" v-bind:class="{ selected: isSelected(button) }" class="primary category"  v-bind:value="button" v-on:click="select" />
     <p>{{ selected }}</p>
   </div>
 </template>
@@ -11,6 +11,9 @@ export default {
   data () {
     return {
       selected: 'None',
+      isSelected: function (button) {
+        return this.selected === button
+      },
       buttons: [
         'Templates',
         'Data Structures',
