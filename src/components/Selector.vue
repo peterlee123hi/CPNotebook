@@ -18,7 +18,15 @@ export default {
         'Graph Algorithms',
         'Math',
         'String Processing'
-      ]
+      ],
+      algorithms: {
+        'Templates': ['C++', 'Java'],
+        'Data Structures': ['Union Find', 'Segment Tree', 'Fenwick Tree'],
+        'Dynamic Programming': ['Max 1D Range Sum', 'Max 2D Range Sum', 'Longest Increasing Subsequence', 'Knapsack', 'Coin Change'],
+        'Graph Algorithms': ['Breadth First Search', 'Depth First Search', 'Dijkstra\' SP', 'Bellman-Ford\'s SP', 'Warshall\'s APSP'],
+        'Math': ['Sieve\'s Prime Algorithm'],
+        'String Processing': ['KMP Algorithm']
+      }
     }
   },
   methods: {
