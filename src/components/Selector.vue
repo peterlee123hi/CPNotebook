@@ -1,6 +1,7 @@
 <template>
   <div class="selector">
-    <h1>{{ selected }}</h1>
+    <input v-for="button in buttons" type="button" v-bind:class="{ selected: isSelected }" class="primary category"  v-bind:value="button" v-on:click="select" />
+    <p>{{ selected }}</p>
   </div>
 </template>
 
@@ -19,6 +20,11 @@ export default {
         'String Processing'
       ]
     }
+  },
+  methods: {
+    select: function (event) {
+      this.selected = event.target.value
+    }
   }
 }
 </script>
@@ -26,8 +32,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .selector {
-  background-color: #ddd;
+  background-color: #eee;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.category {
+  position: relative;
+  top: 0;
+  padding: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  transition: top 0.5s, background-color 0.5s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.category:hover {
+  top: -4px;
 }
 </style>

@@ -24,18 +24,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-h1, h2 {
+h1, h2, p {
+  font: 'Source Sans Pro';
   font-weight: normal;
 }
 
-.full_screen{
+.full_screen {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-.overlay{
+.overlay {
   background-color: black;
   opacity: 0.7;
   position: absolute;
