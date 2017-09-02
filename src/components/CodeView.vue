@@ -1,7 +1,7 @@
 <template>
   <div class="codeView">
-<!--     <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" /> -->
-    <p>hi</p>
+    <input v-for="algorithm in algorithms[category]" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
+    <p>hi: {{category}}</p>
   </div>
 </template>
 
@@ -11,11 +11,17 @@ export default {
   data () {
     return {
       selected: 'None',
+      props: {
+        category: {
+          type: String,
+          default: 'None'
+        }
+      },
       isSelected: function (button) {
         return this.selected === button
       },
-      buttons: ['hi'],
       algorithms: {
+        'None': [],
         'Templates': ['C++', 'Java'],
         'Data Structures': ['Union Find', 'Segment Tree', 'Fenwick Tree'],
         'Dynamic Programming': ['Max 1D Range Sum', 'Max 2D Range Sum', 'Longest Increasing Subsequence', 'Knapsack', 'Coin Change'],
@@ -36,7 +42,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .codeView {
-  background-color: #eee;
   padding-top: 20px;
   padding-bottom: 20px;
 }

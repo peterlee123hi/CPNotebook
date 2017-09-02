@@ -3,12 +3,13 @@
     <div class="selector-buttons">
       <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
     </div>
-    <code-view></code-view>
+    <code-view v-bind:category="selected"></code-view>
   </div>
 </template>
 
 <script>
 import CodeView from './CodeView.vue'
+
 export default {
   name: 'selector',
   components: { CodeView },
