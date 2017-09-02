@@ -1,7 +1,6 @@
 <template>
   <div class="selector">
-    <input v-for="button in buttons" type="button" v-bind:class="{ selected: isSelected(button) }" class="primary category"  v-bind:value="button" v-on:click="select" />
-    <p>{{ selected }}</p>
+    <input v-for="button in buttons" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
   </div>
 </template>
 
@@ -44,22 +43,28 @@ export default {
 <style lang="scss" scoped>
 .selector {
   background-color: #eee;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .category {
   position: relative;
   top: 0;
-  padding: 12px;
+  padding: 12px 20px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2rem;
-  font-weight: 900;
-  transition: top 0.5s, background-color 0.5s;
+  font-weight: 100;
+  border-radius: 100px;
+  transition: top 0.25s, background-color 0.2s;
+  outline: none;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .category:hover {
   top: -4px;
+}
+
+.selected {
+  background-color: #283593 !important;
 }
 </style>

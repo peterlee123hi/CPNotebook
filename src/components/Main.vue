@@ -26,11 +26,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 h1, h2, p {
-  font: 'Source Sans Pro';
+  font-family: 'Source Sans Pro';
   font-weight: normal;
 }
 
-.code_background{
+h1 {
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.code_background {
   width: 100%;
   position: relative;
   top: 0;
@@ -41,7 +46,7 @@ h1, h2, p {
 
   color: white;
 
-  .banner_heading{
+  .banner_heading {
     position: relative;
     padding: 0 10px;
   }
