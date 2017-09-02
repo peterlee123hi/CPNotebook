@@ -1,10 +1,11 @@
 <template>
   <div class="main">
-    <div class="full_screen">
-      <img src="../assets/code_background.jpg"></img>
+    <div class="code_background">
       <div class="overlay"></div>
+      <div class="banner_heading">
+        <h1>{{ title }}</h1>
+      </div>
     </div>
-    <h1>{{ title }}</h1>
     <selector></selector>
   </div>
 </template>
@@ -28,11 +29,21 @@ h1, h2 {
   font-weight: normal;
 }
 
-.full_screen{
+.code_background{
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
   position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 0px;
+  background-image: url('../assets/code_background.jpg');
+  background-size: cover;
+
+  color: white;
+
+  .banner_heading{
+    position: relative;
+    padding: 0 10px;
+  }
 }
 
 .overlay{
