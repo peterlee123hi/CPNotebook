@@ -8,15 +8,15 @@
 <script>
 export default {
   name: 'codeView',
+  props: {
+    category: {
+      type: String,
+      default: 'None'
+    }
+  },
   data () {
     return {
       selected: 'None',
-      props: {
-        category: {
-          type: String,
-          default: 'None'
-        }
-      },
       isSelected: function (button) {
         return this.selected === button
       },
