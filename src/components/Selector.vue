@@ -15,7 +15,7 @@ export default {
   components: { CodeView },
   data () {
     return {
-      selected: 'None',
+      selected: 'Templates',
       isSelected: function (button) {
         return this.selected === button
       },
