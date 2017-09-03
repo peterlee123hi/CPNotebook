@@ -1,7 +1,6 @@
 <template>
   <div class="codeView">
-    <input v-for="algorithm in algorithms[category]" type="button" class="primary category" v-bind:class="{ selected: isSelected(button) }"  v-bind:value="button" v-on:click="select" />
-    <p>hi: {{category}}</p>
+    <input v-for="algorithm in algorithms[category]" type="button" class="primary category" v-bind:class="{ selected: isSelected(algorithm) }"  v-bind:value="algorithm" v-on:click="select" />
   </div>
 </template>
 
@@ -17,8 +16,8 @@ export default {
   data () {
     return {
       selected: 'None',
-      isSelected: function (button) {
-        return this.selected === button
+      isSelected: function (algorithm) {
+        return this.selected === algorithm
       },
       algorithms: {
         'None': [],
