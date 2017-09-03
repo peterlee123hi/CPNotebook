@@ -1,6 +1,12 @@
 <template>
   <div class="codeView">
-    <input v-for="algorithm in algorithms[category]" type="button" class="primary category" v-bind:class="{ selected: isSelected(algorithm) }"  v-bind:value="algorithm" v-on:click="select" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <input v-for="algorithm in algorithms[category]" type="button" class="algorithm" v-bind:class="{ selected: isSelected(algorithm) }"  v-bind:value="algorithm" v-on:click="select" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,32 +43,29 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.codeView {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.col-md-3{
+  margin-top: 20px;
+  border-right: 1px solid #BBB;
+  padding: 0 30px;
 }
 
-.category {
-  position: relative;
-  top: 0;
+.algorithm {
+  width: 100%;
   padding: 12px 20px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
-  border-radius: 100px;
+  font-weight: 300;
   transition: top 0.25s, background-color 0.2s;
   outline: none;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.category:hover {
-  top: -4px;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .selected {
   background-color: #283593 !important;
+  color: white;
+  font-weight: 400;
 }
 </style>
